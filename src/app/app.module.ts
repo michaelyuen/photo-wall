@@ -3,16 +3,15 @@ import { BrowserModule }  from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
-import { RouterStoreModule } from '@ngrx/router-store';
 
-import { AppStore, AppConfigService, AppComponent, AppRoutingModule } from './index';
+import { AppStore, AppConfigService, AppComponent } from './index';
+import { PhotoGalleryModule } from './components/photo-gallery/index';
 
 const IMPORTS: Array<any> = [
-	AppRoutingModule,
 	BrowserModule,
 	HttpModule,
-	StoreModule.provideStore(AppStore),
-	RouterStoreModule.connectRouter()
+	PhotoGalleryModule,
+	StoreModule.provideStore(AppStore)
 ];
 
 if ( ENV === 'dev' ) {
