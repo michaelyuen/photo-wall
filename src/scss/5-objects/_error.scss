@@ -1,0 +1,7 @@
+.error {
+	background: lighten( $red, 30% );
+	border: 1px solid $red;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+	color: $red;
+	padding: 5px;
+}

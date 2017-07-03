@@ -1,0 +1,13 @@
+.question-mark {
+	border: 1px solid $border;
+	border-radius: 50%;
+	color: $border;
+	font-size: .8rem;
+	width: 20px; height: 20px;
+
+	&:hover {
+		border-color: $gray-alt;
+		color: $gray-alt;
+		cursor: pointer;
+	}
+}

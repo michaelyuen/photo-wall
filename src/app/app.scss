@@ -1,0 +1,28 @@
+@import '../scss/1-settings/_breakpoints';
+@import '../scss/1-settings/_colors';
+@import '../scss/1-settings/_sizes';
+
+:host {
+	display: block;
+
+	.adc-nav-padding {
+		padding-top: $nav-height * .75;
+
+		@media #{$mq-768} {
+			padding-top: $nav-height;
+		}
+
+		.body {
+			background: $white;
+			padding: 25px;
+
+			@media #{$mq-1440} {
+				padding: 50px;
+			}
+
+			@media #{$mq-1720} {
+				padding-top: 100px;
+			}
+		}
+	}
+}

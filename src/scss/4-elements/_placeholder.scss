@@ -1,0 +1,24 @@
+@import '../1-settings/_fonts';
+@import '../1-settings/_colors';
+@import '../1-settings/_sizes';
+
+::placeholder {
+	color: $gray;
+	font: italic $placeholder-font-size $font-family;
+}
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+	color: $gray;
+	font: italic $placeholder-font-size $font-family;
+}
+::-moz-placeholder { /* Firefox 19+ */
+	color: $gray;
+	font: italic $placeholder-font-size $font-family;
+}
+:-ms-input-placeholder { /* IE 10+ */
+	color: $gray;
+	font: italic $placeholder-font-size $font-family;
+}
+:-moz-placeholder { /* Firefox 18- */
+	color: $gray;
+	font: italic $placeholder-font-size $font-family;
+}

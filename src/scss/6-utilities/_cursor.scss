@@ -1,0 +1,27 @@
+.hover-no-decoration:hover {
+	text-decoration: none;
+}
+
+.hover-link {
+	&:hover,
+	&:focus {
+		cursor: pointer;
+	}
+}
+
+.hover-link-gray {
+	&:hover,
+	&:focus {
+		color: $gray-alt !important;
+		cursor: pointer;
+	}
+}
+
+.hover-link-white {
+	&:hover,
+	&:focus {
+		color: $white !important;
+		cursor: pointer;
+		font-weight: bold;
+	}
+}

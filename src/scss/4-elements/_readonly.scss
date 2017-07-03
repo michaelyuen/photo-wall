@@ -1,0 +1,13 @@
+*[readonly],
+*[readonly="readonly"],
+*.read-only {
+	&:not(input, textarea){
+		border-bottom: 1px solid $gray-dark !important;
+		color: $gray-dark !important;
+		font-style: initial !important;
+
+		&:hover {
+			cursor: text !important;
+		}
+	}
+}

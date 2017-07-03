@@ -1,0 +1,32 @@
+// Base variables from color palette (coordinates with EY UX Style Guide)
+$black: #000;
+$gray-dark: #333;
+$gray-alt: #646464;
+$gray: #808080;
+$gray-tint-1: #999;
+$gray-tint-2: #c0c0c0;
+$gray-tint-3: #f0f0f0;
+$white: #fff;
+
+$yellow: #ffe600;
+$yellow-light: #fff27f;
+
+$blue-link: #336699;
+$red: #f04c3e;
+
+$blue: #00a3ae;
+$blue-light: #7fd1d6;
+
+$purple: #91278f;
+$purple-light: #c893c7;
+
+$green: #2c973e;
+$green-light: #95cb89;
+
+$lilac: #ac98db;
+$lilac-light: #d8d2e0;
+
+// UI specific components using base variables
+$nav-bg: #{$gray-dark};
+$primary: #{$yellow};
+$border: #{$gray-tint-2};

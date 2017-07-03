@@ -1,0 +1,13 @@
+.collapse, .collapse.show {
+	display: block !important;
+	transition: max-height 300ms ease-out;
+}
+
+.collapse {
+	max-height: 0;
+	overflow: hidden;
+}
+
+.collapse.show {
+	max-height: 1000px;
+}

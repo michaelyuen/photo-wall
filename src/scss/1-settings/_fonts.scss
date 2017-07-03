@@ -1,0 +1,82 @@
+/*
+ *  Set global font weights
+ */
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-bold: 600;
+
+/*
+ *  Simple function to capitalize a string
+ */
+@function capitalize( $string ){
+	@return to-upper-case( str-slice( $string, 1, 1 ) ) + str-slice( $string, 2 );
+}
+
+/*
+ *  Allows us to declare the font family in a more DRY manner
+ *  - simply made to support ttf for EY Interstate, but can be extended
+ *  - also assumes where the font assets live
+ */
+@mixin font-face( $name, $weight: null, $style: null ){
+
+	$src: '../assets/fonts/' + $name + '/';
+	$path: $name + '-';
+	$ext: '.ttf';
+
+	// If weight is not null
+	@if $weight {
+
+		@if $weight == light {
+
+			$path: $path + capitalize( $weight );
+			$weight: 300;
+		}
+		@else if $weight == bold {
+
+			$path: $path + capitalize( $weight );
+			$weight: 600;
+		}
+	}
+	// If weight is null and style is italic, don't use 'Regular' in path
+	@else if $style == italic {
+
+		$weight: 400;
+	}
+	@else {
+
+		$path: $path + 'Regular';
+		$weight: 400;
+	}
+
+	@if $style {
+
+		$path: $path + capitalize( $style );
+	}
+	@else {
+
+		$style: normal;
+	}
+
+	@font-face {
+		font-family: quote( $name );
+		src: url( quote( $src + $path + $ext ) ) format( quote( 'truetype' ) );
+		font-style: $style;
+		font-weight: $weight;
+	}
+}
+
+// Define the font family using mixin
+@include font-face( 'Interstate' );
+@include font-face( 'Interstate', null, italic );
+@include font-face( 'Interstate', light );
+@include font-face( 'Interstate', light, italic );
+@include font-face( 'Interstate', bold );
+@include font-face( 'Interstate', bold, italic );
+
+$font-family: 'Interstate', 'Arial', serif;
+
+$font-size: 14px;
+$placeholder-font-size: 14pt;
+
+$line-height-mobile: 1.25;
+$line-height-desktop: 1.375;

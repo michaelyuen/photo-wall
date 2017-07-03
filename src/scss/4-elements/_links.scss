@@ -1,0 +1,11 @@
+a {
+	color: $border;
+	display: block;
+	text-decoration: none;
+
+	&:hover,
+	&:focus {
+		color: $gray-alt;
+		cursor: pointer;
+	}
+}

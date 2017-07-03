@@ -1,0 +1,178 @@
+button {
+	background: none;
+	border: none;
+	font-family: inherit;
+	padding: 0;
+	text-align: initial;
+
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+[disabled] {
+	cursor: not-allowed !important;
+}
+
+.ey-btn {
+	background: none;
+	border: 1px solid $border;
+	border-radius: 50%;
+	color: $primary;
+	display: flex; justify-content: center; align-items: center;
+	fill: $primary;
+	margin: auto;
+	padding: 0;
+	stroke: $primary;
+
+	i {
+		color: $primary;
+	}
+
+	/deep/ adc-icon {
+		.adc-icon {
+			fill: $primary;
+			stroke: $primary;
+		}
+	}
+
+	&:hover,
+	&:focus {
+		background: $primary;
+		border-color: $primary;
+		color: $white;
+		fill: $white;
+		stroke: $white;
+		text-decoration: none;
+
+		i {
+			color: $white;
+		}
+
+		/deep/ adc-icon {
+			.adc-icon {
+				fill: $white;
+				stroke: $white;
+			}
+		}
+	}
+
+	&[disabled] {
+		&:hover,
+		&:focus {
+			background: inherit !important;
+			border-color: inherit !important;
+			color: $border !important;
+		}
+	}
+}
+
+.ey-btn-xxs {
+	@extend .ey-btn;
+	width: 15px; height: 15px;
+
+	@media #{$mq-1920} {
+		width: 20px; height: 20px;
+	}
+}
+
+.ey-btn-xs {
+	@extend .ey-btn;
+	width: 30px; height: 30px;
+
+	@media #{$mq-1920} {
+		width: 40px; height: 40px;
+	}
+}
+
+.ey-btn-sm {
+	@extend .ey-btn;
+	width: 50px; height: 50px;
+
+	@media #{$mq-1920} {
+		width: 60px; height: 60px;
+	}
+}
+
+.ey-btn-md {
+	@extend .ey-btn;
+	width: 60px; height: 60px;
+}
+
+.ey-btn-lg {
+	@extend .ey-btn;
+	width: 80px; height: 80px;
+}
+
+.ey-btn-pill {
+	background: none;
+	border: 1px solid $border;
+	border-radius: 40px;
+	color: $border;
+	display: flex;
+	margin: 0 15px;
+	min-width: 150px; height: 40px;
+	padding: 0;
+}
+
+.ey-btn-square-secondary {
+	background: $gray-alt;
+	border: 1px solid darken( $gray-alt, 5% );
+	display: flex;
+	min-width: 150px; height: 40px;
+
+	&:hover {
+		background: $yellow;
+		border: 1px solid darken( $yellow, 5% );
+	}
+}
+
+.ey-btn-square-primary {
+	@extend .ey-btn-square-secondary;
+
+	background: $yellow;
+	border: 1px solid darken( $yellow, 5% );
+
+	&:hover:not([disabled]) {
+		background: darken( $yellow, 15% ) !important;
+		border: 1px solid darken( $yellow, 20% );
+		cursor: pointer;
+	}
+
+	&[disabled] {
+		background: $yellow-light;
+	}
+}
+
+.ey-btn-pill-empty {
+	@extend .ey-btn-pill;
+
+	&.valid {
+		color: $yellow;
+	}
+}
+
+.ey-btn-pill-full {
+	@extend .ey-btn-pill;
+	background: $border;
+	color: $white;
+
+	&[disabled] {
+		&:hover,
+		&:focus {
+			background: $border;
+			border: inherit;
+		}
+	}
+
+	&.valid {
+		background: $yellow;
+		border-color: $yellow;
+	}
+
+	&:hover,
+	&:focus {
+		background: darken( $yellow, 15% );
+		border-color: darken( $yellow, 15% );
+	}
+}

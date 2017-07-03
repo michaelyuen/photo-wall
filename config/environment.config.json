@@ -1,0 +1,10 @@
+{
+	"dev": {
+		"ENV": "dev",
+		"SVG_PATH": "src/assets/icons/symbol-defs.svg"
+	},
+	"prod": {
+		"ENV": "prod",
+		"SVG_PATH": "assets/symbol-defs.svg"
+	}
+}

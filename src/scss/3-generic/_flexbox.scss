@@ -1,0 +1,105 @@
+.flex {
+	display: flex !important;
+}
+
+.flex-inline{
+	display: inline-flex !important;
+}
+
+.flex-col {
+	@extend .flex;
+	flex-direction: column;
+}
+
+.flex-wrap {
+	@extend .flex;
+	flex-wrap: wrap;
+}
+
+.flex-grow-fill {
+	flex-grow: 1;
+}
+
+.justify-start {
+	justify-content: flex-start;
+}
+
+.justify-end {
+	justify-content: flex-end;
+}
+
+.justify-center {
+	justify-content: center;
+}
+
+.justify-between {
+	justify-content: space-between;
+}
+
+.justify-around {
+	justify-content: space-around;
+}
+
+.align-start {
+	align-items: flex-start;
+}
+
+.align-end {
+	align-items: flex-end;
+}
+
+.align-center {
+	align-items: center;
+}
+
+.align-base {
+	align-items: baseline;
+}
+
+.align-stretch {
+	align-items: stretch;
+}
+
+.child-align-start {
+	align-self: flex-start;
+}
+
+.child-align-end {
+	align-self: flex-end;
+}
+
+.child-align-center {
+	align-self: center;
+}
+
+.child-align-base {
+	align-self: baseline;
+}
+
+.child-align-stretch {
+	align-self: stretch;
+}
+
+.child-basis-eighth {
+	flex-basis: 12.5%
+}
+
+.child-basis-sixth {
+	flex-basis: 16.6667%
+}
+
+.child-basis-quarter {
+	flex-basis: 25%
+}
+
+.child-basis-third {
+	flex-basis: 33.3333%
+}
+
+.child-basis-half {
+	flex-basis: 50%;
+}
+
+.child-basis-75 {
+	flex-basis: 75%;
+}

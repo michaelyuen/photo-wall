@@ -1,0 +1,47 @@
+.modal-backdrop {
+	&.show {
+		opacity: .5;
+	}
+}
+
+.modal {
+	text-align: center;
+
+	&:before {
+		content: '';
+		display: inline-block;
+		vertical-align: middle;
+		height: 100%;
+	}
+
+	&.fade {
+		opacity: 1;
+	}
+
+	.modal-dialog {
+		display: inline-block;
+		margin: 0;
+		transform: translate(0,0) !important;
+		vertical-align: middle;
+
+		.modal-content {
+			border: none;
+			border-radius: 0;
+			width: 100%;
+
+			.form-container {
+				width: 100%;
+
+				h1 {
+					border-bottom: 1px solid $border;
+					margin: 0;
+					padding: 25px 0;
+				}
+
+				form {
+					padding: 50px;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,1067 @@
+{
+	"navigation": {
+		"hideNavList": [
+			"/login"
+		],
+		"menuItems": [
+			{
+				"name": "Data",
+				"children": [
+					{
+						"name": "Map Data",
+						"path": null
+					},
+					{
+						"name": "Ingest Data",
+						"path": null
+					}
+				]
+			},
+			{
+				"name": "Customer",
+				"children": [
+					{
+						"name": "Files",
+						"path": null
+					},
+					{
+						"name": "Update",
+						"path": null
+					}
+				]
+			},
+			{
+				"name": "Scenario",
+				"children": [
+					{
+						"name": "Overview",
+						"path": "/scenario/overview"
+					},
+					{
+						"name": "Create New",
+						"path": "/scenario/create"
+					}
+				]
+			},
+			{
+				"name": "Analytics",
+				"children": [
+					{
+						"name": "Perform Analysis",
+						"path": null
+					},
+					{
+						"name": "Design Model",
+						"path": null
+					},
+					{
+						"name": "Import Model",
+						"path": null
+					}
+				]
+			},
+			{
+				"name": "Execution Manager",
+				"children": [
+					{
+						"name": "Schedule Scenarios and Models",
+						"path": null
+					},
+					{
+						"name": "Run Scenarios and Models",
+						"path": null
+					},
+					{
+						"name": "Review Scenario and Model Results",
+						"path": null
+					},
+					{
+						"name": "Performance Monitoring",
+						"path": null
+					}
+				]
+			},
+			{
+				"name": "Case",
+				"children": [
+					{
+						"name": "Manage and Assign",
+						"path": "/case/overview"
+					},
+					{
+						"name": "Investigate",
+						"path": null
+					},
+					{
+						"name": "Workforce Management",
+						"path": null
+					},
+					{
+						"name": "Operational Reporting",
+						"path": null
+					}
+				]
+			}
+		]
+	},
+	"login": {
+		"users": [
+			{
+				"username": "Carl.Case",
+				"password": "password",
+				"company": "Ernst & Young"
+			},
+			{
+				"username": "Michael.Yuen",
+				"password": "password",
+				"company": "Ernst & Young"
+			},
+			{
+				"username": "Ashish.Kudva",
+				"password": "password",
+				"company": "Ernst & Young"
+			},
+			{
+				"username": "Satya.Agarwal",
+				"password": "password",
+				"company": "Ernst & Young"
+			},
+			{
+				"username": "Han.Solo",
+				"password": "password",
+				"company": "Credit Suisse"
+			},
+			{
+				"username": "Indiana.Jones",
+				"password": "password",
+				"company": "Citi Bank"
+			}
+		]
+	},
+	"case": {
+		"endpoints": {
+			"get": "case/view",
+			"export": "case/download"
+		},
+		"overview": {
+			"columns": [
+				{
+					"title": "Case ID",
+					"key": "case_id"
+				},
+				{
+					"title": "Status",
+					"key": "status"
+				},
+				{
+					"title": "Score",
+					"key": "score"
+				},
+				{
+					"title": "Negative News",
+					"key": "negativeNews"
+				},
+				{
+					"title": "# of Associated Alerts",
+					"key": "alert_ct"
+				},
+				{
+					"title": "Entity Name",
+					"key": "entityName"
+				},
+				{
+					"title": "Case Type",
+					"key": "caseType"
+				},
+				{
+					"title": "Entity Type",
+					"key": "entityType"
+				},
+				{
+					"title": "Creation Date",
+					"key": "case_dt"
+				}
+			],
+			"pagination": {
+				"pageSize": 15,
+				"pageToStart": 1
+			},
+			"mockCases": [
+				{
+					"case_id": "3918",
+					"status": "Unassigned",
+					"score": "59",
+					"negativeNews": "Y",
+					"alert_ct": "5",
+					"entityName": "John Smith",
+					"caseType": "Transaction",
+					"entityType": "Customer",
+					"creationDate": "2017/05/21"
+				},
+				{
+					"case_id": "1867",
+					"status": "Assigned",
+					"score": "34",
+					"negativeNews": "N",
+					"alert_ct": "2",
+					"entityName": "Jane Doe",
+					"caseType": "Transaction",
+					"entityType": "Account",
+					"creationDate": "2017/06/01"
+				},
+				{
+					"case_id": "1297",
+					"status": "Unassigned",
+					"score": "76",
+					"negativeNews": "Y",
+					"alert_ct": "8",
+					"entityName": "Patrick Harris",
+					"caseType": "Transaction",
+					"entityType": "Customer",
+					"creationDate": "2017/06/01"
+				},
+				{
+					"case_id": "7482",
+					"status": "Unassigned",
+					"score": "64",
+					"negativeNews": "Y",
+					"alert_ct": "7",
+					"entityName": "Anna Morgan",
+					"caseType": "Transaction",
+					"entityType": "Customer",
+					"creationDate": "2017/06/03"
+				},
+				{
+					"case_id": "4507",
+					"status": "Unassigned",
+					"score": "42",
+					"negativeNews": "88",
+					"alert_ct": "7",
+					"entityName": "Stanley Martin",
+					"caseType": "Transaction",
+					"entityType": "Account",
+					"creationDate": "2017/06/19"
+				},
+				{
+					"case_id": "4507",
+					"status": "Unassigned",
+					"score": "26",
+					"negativeNews": "18",
+					"alert_ct": "1",
+					"entityName": "Claire Sizemore",
+					"caseType": "Transaction",
+					"entityType": "Account",
+					"creationDate": "2017/06/19"
+				},
+				{
+					"case_id": "4507",
+					"status": "Unassigned",
+					"score": "44",
+					"negativeNews": "13",
+					"alert_ct": "1",
+					"entityName": "Aaron Judge",
+					"caseType": "Transaction",
+					"entityType": "Customer",
+					"creationDate": "2017/06/19"
+				},
+				{
+					"case_id": "4507",
+					"status": "Assigned",
+					"score": "73",
+					"negativeNews": "54",
+					"alert_ct": "1",
+					"entityName": "Valerie Rivera",
+					"caseType": "Transaction",
+					"entityType": "Customer",
+					"creationDate": "2017/06/19"
+				},
+				{
+					"case_id": "4507",
+					"status": "Unassigned",
+					"score": "12",
+					"negativeNews": "45",
+					"alert_ct": "1",
+					"entityName": "Mason Bigelow",
+					"caseType": "Transaction",
+					"entityType": "Account",
+					"creationDate": "2017/06/19"
+				},
+				{
+					"case_id": "3918",
+					"status": "Unassigned",
+					"score": "59",
+					"negativeNews": "Y",
+					"alert_ct": "5",
+					"entityName": "John Smith",
+					"caseType": "Transaction",
+					"entityType": "Customer",
+					"creationDate": "2017/05/21"
+				},
+				{
+					"case_id": "1867",
+					"status": "Assigned",
+					"score": "34",
+					"negativeNews": "N",
+					"alert_ct": "2",
+					"entityName": "Jane Doe",
+					"caseType": "Transaction",
+					"entityType": "Account",
+					"creationDate": "2017/06/01"
+				},
+				{
+					"case_id": "1297",
+					"status": "Unassigned",
+					"score": "76",
+					"negativeNews": "Y",
+					"alert_ct": "8",
+					"entityName": "Patrick Harris",
+					"caseType": "Transaction",
+					"entityType": "Customer",
+					"creationDate": "2017/06/01"
+				},
+				{
+					"case_id": "7482",
+					"status": "Unassigned",
+					"score": "64",
+					"negativeNews": "Y",
+					"alert_ct": "7",
+					"entityName": "Anna Morgan",
+					"caseType": "Transaction",
+					"entityType": "Customer",
+					"creationDate": "2017/06/03"
+				},
+				{
+					"case_id": "4507",
+					"status": "Unassigned",
+					"score": "42",
+					"negativeNews": "88",
+					"alert_ct": "7",
+					"entityName": "Stanley Martin",
+					"caseType": "Transaction",
+					"entityType": "Account",
+					"creationDate": "2017/06/19"
+				},
+				{
+					"case_id": "4507",
+					"status": "Unassigned",
+					"score": "26",
+					"negativeNews": "18",
+					"alert_ct": "1",
+					"entityName": "Claire Sizemore",
+					"caseType": "Transaction",
+					"entityType": "Account",
+					"creationDate": "2017/06/19"
+				},
+				{
+					"case_id": "4507",
+					"status": "Unassigned",
+					"score": "44",
+					"negativeNews": "13",
+					"alert_ct": "1",
+					"entityName": "Aaron Judge",
+					"caseType": "Transaction",
+					"entityType": "Customer",
+					"creationDate": "2017/06/19"
+				},
+				{
+					"case_id": "4507",
+					"status": "Assigned",
+					"score": "73",
+					"negativeNews": "54",
+					"alert_ct": "1",
+					"entityName": "Valerie Rivera",
+					"caseType": "Transaction",
+					"entityType": "Customer",
+					"creationDate": "2017/06/19"
+				},
+				{
+					"case_id": "4507",
+					"status": "Unassigned",
+					"score": "12",
+					"negativeNews": "45",
+					"alert_ct": "1",
+					"entityName": "Mason Bigelow",
+					"caseType": "Transaction",
+					"entityType": "Account",
+					"creationDate": "2017/06/19"
+				},{
+					"case_id": "3918",
+					"status": "Unassigned",
+					"score": "59",
+					"negativeNews": "Y",
+					"alert_ct": "5",
+					"entityName": "John Smith",
+					"caseType": "Transaction",
+					"entityType": "Customer",
+					"creationDate": "2017/05/21"
+				},
+				{
+					"case_id": "1867",
+					"status": "Assigned",
+					"score": "34",
+					"negativeNews": "N",
+					"alert_ct": "2",
+					"entityName": "Jane Doe",
+					"caseType": "Transaction",
+					"entityType": "Account",
+					"creationDate": "2017/06/01"
+				},
+				{
+					"case_id": "1297",
+					"status": "Unassigned",
+					"score": "76",
+					"negativeNews": "Y",
+					"alert_ct": "8",
+					"entityName": "Patrick Harris",
+					"caseType": "Transaction",
+					"entityType": "Customer",
+					"creationDate": "2017/06/01"
+				},
+				{
+					"case_id": "7482",
+					"status": "Unassigned",
+					"score": "64",
+					"negativeNews": "Y",
+					"alert_ct": "7",
+					"entityName": "Anna Morgan",
+					"caseType": "Transaction",
+					"entityType": "Customer",
+					"creationDate": "2017/06/03"
+				},
+				{
+					"case_id": "4507",
+					"status": "Unassigned",
+					"score": "42",
+					"negativeNews": "88",
+					"alert_ct": "7",
+					"entityName": "Stanley Martin",
+					"caseType": "Transaction",
+					"entityType": "Account",
+					"creationDate": "2017/06/19"
+				},
+				{
+					"case_id": "4507",
+					"status": "Unassigned",
+					"score": "26",
+					"negativeNews": "18",
+					"alert_ct": "1",
+					"entityName": "Claire Sizemore",
+					"caseType": "Transaction",
+					"entityType": "Account",
+					"creationDate": "2017/06/19"
+				},
+				{
+					"case_id": "4507",
+					"status": "Unassigned",
+					"score": "44",
+					"negativeNews": "13",
+					"alert_ct": "1",
+					"entityName": "Aaron Judge",
+					"caseType": "Transaction",
+					"entityType": "Customer",
+					"creationDate": "2017/06/19"
+				},
+				{
+					"case_id": "4507",
+					"status": "Assigned",
+					"score": "73",
+					"negativeNews": "54",
+					"alert_ct": "1",
+					"entityName": "Valerie Rivera",
+					"caseType": "Transaction",
+					"entityType": "Customer",
+					"creationDate": "2017/06/19"
+				},
+				{
+					"case_id": "4507",
+					"status": "Unassigned",
+					"score": "12",
+					"negativeNews": "45",
+					"alert_ct": "1",
+					"entityName": "Mason Bigelow",
+					"caseType": "Transaction",
+					"entityType": "Account",
+					"creationDate": "2017/06/19"
+				},{
+					"case_id": "3918",
+					"status": "Unassigned",
+					"score": "59",
+					"negativeNews": "Y",
+					"alert_ct": "5",
+					"entityName": "John Smith",
+					"caseType": "Transaction",
+					"entityType": "Customer",
+					"creationDate": "2017/05/21"
+				},
+				{
+					"case_id": "1867",
+					"status": "Assigned",
+					"score": "34",
+					"negativeNews": "N",
+					"alert_ct": "2",
+					"entityName": "Jane Doe",
+					"caseType": "Transaction",
+					"entityType": "Account",
+					"creationDate": "2017/06/01"
+				},
+				{
+					"case_id": "1297",
+					"status": "Unassigned",
+					"score": "76",
+					"negativeNews": "Y",
+					"alert_ct": "8",
+					"entityName": "Patrick Harris",
+					"caseType": "Transaction",
+					"entityType": "Customer",
+					"creationDate": "2017/06/01"
+				},
+				{
+					"case_id": "7482",
+					"status": "Unassigned",
+					"score": "64",
+					"negativeNews": "Y",
+					"alert_ct": "7",
+					"entityName": "Anna Morgan",
+					"caseType": "Transaction",
+					"entityType": "Customer",
+					"creationDate": "2017/06/03"
+				},
+				{
+					"case_id": "4507",
+					"status": "Unassigned",
+					"score": "42",
+					"negativeNews": "88",
+					"alert_ct": "7",
+					"entityName": "Stanley Martin",
+					"caseType": "Transaction",
+					"entityType": "Account",
+					"creationDate": "2017/06/19"
+				},
+				{
+					"case_id": "4507",
+					"status": "Unassigned",
+					"score": "26",
+					"negativeNews": "18",
+					"alert_ct": "1",
+					"entityName": "Claire Sizemore",
+					"caseType": "Transaction",
+					"entityType": "Account",
+					"creationDate": "2017/06/19"
+				},
+				{
+					"case_id": "4507",
+					"status": "Unassigned",
+					"score": "44",
+					"negativeNews": "13",
+					"alert_ct": "1",
+					"entityName": "Aaron Judge",
+					"caseType": "Transaction",
+					"entityType": "Customer",
+					"creationDate": "2017/06/19"
+				},
+				{
+					"case_id": "4507",
+					"status": "Assigned",
+					"score": "73",
+					"negativeNews": "54",
+					"alert_ct": "1",
+					"entityName": "Valerie Rivera",
+					"caseType": "Transaction",
+					"entityType": "Customer",
+					"creationDate": "2017/06/19"
+				},
+				{
+					"case_id": "4507",
+					"status": "Unassigned",
+					"score": "12",
+					"negativeNews": "45",
+					"alert_ct": "1",
+					"entityName": "Mason Bigelow",
+					"caseType": "Transaction",
+					"entityType": "Account",
+					"creationDate": "2017/06/19"
+				},{
+					"case_id": "3918",
+					"status": "Unassigned",
+					"score": "59",
+					"negativeNews": "Y",
+					"alert_ct": "5",
+					"entityName": "John Smith",
+					"caseType": "Transaction",
+					"entityType": "Customer",
+					"creationDate": "2017/05/21"
+				},
+				{
+					"case_id": "1867",
+					"status": "Assigned",
+					"score": "34",
+					"negativeNews": "N",
+					"alert_ct": "2",
+					"entityName": "Jane Doe",
+					"caseType": "Transaction",
+					"entityType": "Account",
+					"creationDate": "2017/06/01"
+				},
+				{
+					"case_id": "1297",
+					"status": "Unassigned",
+					"score": "76",
+					"negativeNews": "Y",
+					"alert_ct": "8",
+					"entityName": "Patrick Harris",
+					"caseType": "Transaction",
+					"entityType": "Customer",
+					"creationDate": "2017/06/01"
+				},
+				{
+					"case_id": "7482",
+					"status": "Unassigned",
+					"score": "64",
+					"negativeNews": "Y",
+					"alert_ct": "7",
+					"entityName": "Anna Morgan",
+					"caseType": "Transaction",
+					"entityType": "Customer",
+					"creationDate": "2017/06/03"
+				},
+				{
+					"case_id": "4507",
+					"status": "Unassigned",
+					"score": "42",
+					"negativeNews": "88",
+					"alert_ct": "7",
+					"entityName": "Stanley Martin",
+					"caseType": "Transaction",
+					"entityType": "Account",
+					"creationDate": "2017/06/19"
+				},
+				{
+					"case_id": "4507",
+					"status": "Unassigned",
+					"score": "26",
+					"negativeNews": "18",
+					"alert_ct": "1",
+					"entityName": "Claire Sizemore",
+					"caseType": "Transaction",
+					"entityType": "Account",
+					"creationDate": "2017/06/19"
+				},
+				{
+					"case_id": "4507",
+					"status": "Unassigned",
+					"score": "44",
+					"negativeNews": "13",
+					"alert_ct": "1",
+					"entityName": "Aaron Judge",
+					"caseType": "Transaction",
+					"entityType": "Customer",
+					"creationDate": "2017/06/19"
+				},
+				{
+					"case_id": "4507",
+					"status": "Assigned",
+					"score": "73",
+					"negativeNews": "54",
+					"alert_ct": "1",
+					"entityName": "Valerie Rivera",
+					"caseType": "Transaction",
+					"entityType": "Customer",
+					"creationDate": "2017/06/19"
+				},
+				{
+					"case_id": "4507",
+					"status": "Unassigned",
+					"score": "12",
+					"negativeNews": "45",
+					"alert_ct": "1",
+					"entityName": "Mason Bigelow",
+					"caseType": "Transaction",
+					"entityType": "Account",
+					"creationDate": "2017/06/19"
+				},{
+					"case_id": "3918",
+					"status": "Unassigned",
+					"score": "59",
+					"negativeNews": "Y",
+					"alert_ct": "5",
+					"entityName": "John Smith",
+					"caseType": "Transaction",
+					"entityType": "Customer",
+					"creationDate": "2017/05/21"
+				},
+				{
+					"case_id": "1867",
+					"status": "Assigned",
+					"score": "34",
+					"negativeNews": "N",
+					"alert_ct": "2",
+					"entityName": "Jane Doe",
+					"caseType": "Transaction",
+					"entityType": "Account",
+					"creationDate": "2017/06/01"
+				},
+				{
+					"case_id": "1297",
+					"status": "Unassigned",
+					"score": "76",
+					"negativeNews": "Y",
+					"alert_ct": "8",
+					"entityName": "Patrick Harris",
+					"caseType": "Transaction",
+					"entityType": "Customer",
+					"creationDate": "2017/06/01"
+				},
+				{
+					"case_id": "7482",
+					"status": "Unassigned",
+					"score": "64",
+					"negativeNews": "Y",
+					"alert_ct": "7",
+					"entityName": "Anna Morgan",
+					"caseType": "Transaction",
+					"entityType": "Customer",
+					"creationDate": "2017/06/03"
+				},
+				{
+					"case_id": "4507",
+					"status": "Unassigned",
+					"score": "42",
+					"negativeNews": "88",
+					"alert_ct": "7",
+					"entityName": "Stanley Martin",
+					"caseType": "Transaction",
+					"entityType": "Account",
+					"creationDate": "2017/06/19"
+				},
+				{
+					"case_id": "4507",
+					"status": "Unassigned",
+					"score": "26",
+					"negativeNews": "18",
+					"alert_ct": "1",
+					"entityName": "Claire Sizemore",
+					"caseType": "Transaction",
+					"entityType": "Account",
+					"creationDate": "2017/06/19"
+				},
+				{
+					"case_id": "4507",
+					"status": "Unassigned",
+					"score": "44",
+					"negativeNews": "13",
+					"alert_ct": "1",
+					"entityName": "Aaron Judge",
+					"caseType": "Transaction",
+					"entityType": "Customer",
+					"creationDate": "2017/06/19"
+				},
+				{
+					"case_id": "4507",
+					"status": "Assigned",
+					"score": "73",
+					"negativeNews": "54",
+					"alert_ct": "1",
+					"entityName": "Valerie Rivera",
+					"caseType": "Transaction",
+					"entityType": "Customer",
+					"creationDate": "2017/06/19"
+				},
+				{
+					"case_id": "4507",
+					"status": "Unassigned",
+					"score": "12",
+					"negativeNews": "45",
+					"alert_ct": "1",
+					"entityName": "Mason Bigelow",
+					"caseType": "Transaction",
+					"entityType": "Account",
+					"creationDate": "2017/06/19"
+				},{
+					"case_id": "3918",
+					"status": "Unassigned",
+					"score": "59",
+					"negativeNews": "Y",
+					"alert_ct": "5",
+					"entityName": "John Smith",
+					"caseType": "Transaction",
+					"entityType": "Customer",
+					"creationDate": "2017/05/21"
+				},
+				{
+					"case_id": "1867",
+					"status": "Assigned",
+					"score": "34",
+					"negativeNews": "N",
+					"alert_ct": "2",
+					"entityName": "Jane Doe",
+					"caseType": "Transaction",
+					"entityType": "Account",
+					"creationDate": "2017/06/01"
+				},
+				{
+					"case_id": "1297",
+					"status": "Unassigned",
+					"score": "76",
+					"negativeNews": "Y",
+					"alert_ct": "8",
+					"entityName": "Patrick Harris",
+					"caseType": "Transaction",
+					"entityType": "Customer",
+					"creationDate": "2017/06/01"
+				},
+				{
+					"case_id": "7482",
+					"status": "Unassigned",
+					"score": "64",
+					"negativeNews": "Y",
+					"alert_ct": "7",
+					"entityName": "Anna Morgan",
+					"caseType": "Transaction",
+					"entityType": "Customer",
+					"creationDate": "2017/06/03"
+				},
+				{
+					"case_id": "4507",
+					"status": "Unassigned",
+					"score": "42",
+					"negativeNews": "88",
+					"alert_ct": "7",
+					"entityName": "Stanley Martin",
+					"caseType": "Transaction",
+					"entityType": "Account",
+					"creationDate": "2017/06/19"
+				},
+				{
+					"case_id": "4507",
+					"status": "Unassigned",
+					"score": "26",
+					"negativeNews": "18",
+					"alert_ct": "1",
+					"entityName": "Claire Sizemore",
+					"caseType": "Transaction",
+					"entityType": "Account",
+					"creationDate": "2017/06/19"
+				},
+				{
+					"case_id": "4507",
+					"status": "Unassigned",
+					"score": "44",
+					"negativeNews": "13",
+					"alert_ct": "1",
+					"entityName": "Aaron Judge",
+					"caseType": "Transaction",
+					"entityType": "Customer",
+					"creationDate": "2017/06/19"
+				},
+				{
+					"case_id": "4507",
+					"status": "Assigned",
+					"score": "73",
+					"negativeNews": "54",
+					"alert_ct": "1",
+					"entityName": "Valerie Rivera",
+					"caseType": "Transaction",
+					"entityType": "Customer",
+					"creationDate": "2017/06/19"
+				},
+				{
+					"case_id": "4507",
+					"status": "Unassigned",
+					"score": "12",
+					"negativeNews": "45",
+					"alert_ct": "1",
+					"entityName": "Mason Bigelow",
+					"caseType": "Transaction",
+					"entityType": "Account",
+					"creationDate": "2017/06/19"
+				},{
+					"case_id": "3918",
+					"status": "Unassigned",
+					"score": "59",
+					"negativeNews": "Y",
+					"alert_ct": "5",
+					"entityName": "John Smith",
+					"caseType": "Transaction",
+					"entityType": "Customer",
+					"creationDate": "2017/05/21"
+				},
+				{
+					"case_id": "1867",
+					"status": "Assigned",
+					"score": "34",
+					"negativeNews": "N",
+					"alert_ct": "2",
+					"entityName": "Jane Doe",
+					"caseType": "Transaction",
+					"entityType": "Account",
+					"creationDate": "2017/06/01"
+				},
+				{
+					"case_id": "1297",
+					"status": "Unassigned",
+					"score": "76",
+					"negativeNews": "Y",
+					"alert_ct": "8",
+					"entityName": "Patrick Harris",
+					"caseType": "Transaction",
+					"entityType": "Customer",
+					"creationDate": "2017/06/01"
+				},
+				{
+					"case_id": "7482",
+					"status": "Unassigned",
+					"score": "64",
+					"negativeNews": "Y",
+					"alert_ct": "7",
+					"entityName": "Anna Morgan",
+					"caseType": "Transaction",
+					"entityType": "Customer",
+					"creationDate": "2017/06/03"
+				},
+				{
+					"case_id": "4507",
+					"status": "Unassigned",
+					"score": "42",
+					"negativeNews": "88",
+					"alert_ct": "7",
+					"entityName": "Stanley Martin",
+					"caseType": "Transaction",
+					"entityType": "Account",
+					"creationDate": "2017/06/19"
+				},
+				{
+					"case_id": "4507",
+					"status": "Unassigned",
+					"score": "26",
+					"negativeNews": "18",
+					"alert_ct": "1",
+					"entityName": "Claire Sizemore",
+					"caseType": "Transaction",
+					"entityType": "Account",
+					"creationDate": "2017/06/19"
+				},
+				{
+					"case_id": "4507",
+					"status": "Unassigned",
+					"score": "44",
+					"negativeNews": "13",
+					"alert_ct": "1",
+					"entityName": "Aaron Judge",
+					"caseType": "Transaction",
+					"entityType": "Customer",
+					"creationDate": "2017/06/19"
+				},
+				{
+					"case_id": "4507",
+					"status": "Assigned",
+					"score": "73",
+					"negativeNews": "54",
+					"alert_ct": "1",
+					"entityName": "Valerie Rivera",
+					"caseType": "Transaction",
+					"entityType": "Customer",
+					"creationDate": "2017/06/19"
+				},
+				{
+					"case_id": "4507",
+					"status": "Unassigned",
+					"score": "12",
+					"negativeNews": "45",
+					"alert_ct": "1",
+					"entityName": "Mason Bigelow",
+					"caseType": "Transaction",
+					"entityType": "Account",
+					"creationDate": "2017/06/19"
+				}
+			]
+		}
+	},
+	"scenario": {
+		"endpoints": {
+			"create": "rule",
+			"update": "rule",
+			"get": "rule",
+			"updateStatus": "rule/approve-reject-rules"
+		},
+		"overview": {
+			"columns": [
+				{
+					"title": "Scenario Name",
+					"key": "ruleName"
+				},
+				{
+					"title": "Focal Entity",
+					"key": "focalEntity"
+				},
+				{
+					"title": "Status",
+					"key": "status"
+				},
+				{
+					"title": "Updated",
+					"key": "lastUpdatedDateTime"
+				}
+			],
+			"pagination": {
+				"pageSize": 15,
+				"pageToStart": 1
+			}
+		},
+		"ruleBuilder":{
+			"endpoints": [
+				"picklist",
+				"segment"
+			],
+			"fields": [
+				{
+					"label": "Focal Entity",
+					"key": "focalEntity"
+				},
+				{
+					"label": "Number",
+					"key": "lookback"
+				},
+				{
+					"label": "Function",
+					"key": "function"
+				},
+				{
+					"label": "Data",
+					"key": "data"
+				},
+				{
+					"label": "Filter",
+					"key": "filter"
+				},
+				{
+					"label": "Compare to",
+					"key": "comparator"
+				},
+				{
+					"label": "Threshold Label",
+					"key": "thresholdLabel"
+				}
+			],
+			"fieldsMap": {
+				"focalEntity": "FocalEntity",
+				"function": "Aggregation",
+				"data": "Field",
+				"filter": "TransactionGroup",
+				"comparator": "Operator",
+				"thresholdLabel": "Threshold Label"
+			},
+			"modifiers": [
+				{
+					"trigger": {
+						"key": "data",
+						"value": "account_opening_dt"
+					},
+					"target": {
+						"key": "multiplier",
+						"value": "1"
+					}
+				}
+			]
+		}
+	}
+}

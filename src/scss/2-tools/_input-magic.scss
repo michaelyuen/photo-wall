@@ -1,0 +1,104 @@
+/*
+	Add floating label input magic based on Googe Material Design
+	http://www.google.com/design/spec/components/text-fields.html#text-fields-floating-labels
+	Author: Michael Yuen
+	@param {Width} @input-width - corresponds to (max) width of input.
+	With a smaller device, the input may have less width but the effect will not be noticably different.
+	@requires - html to have a particular structure
+				- essentially the label after the input, all within a containing element
+	<container-element where mixin is applied>
+		<input>
+		<label>
+	</>
+*/
+@mixin input-magic( $input-width ){
+	position: relative;
+
+	label{
+		color: $gray-dark;
+		font-weight: 400;
+		pointer-events: none;
+		position: absolute; left: 0; top: 20px;
+		transition: top .3s cubic-bezier(.64,.09,.08,1),
+					font-size .3s cubic-bezier(.64,.09,.08,1),
+					color .3s cubic-bezier(.64,.09,.08,1);
+	}
+
+	input,
+	textarea {
+		background-color: transparent !important;
+		background-image: linear-gradient(to left, $border 50%, $primary 50%);
+		background-position: 100% 50px;
+		background-size: 201% 100%;
+		background-repeat: no-repeat;
+		border: none;
+		display: block;
+		transition: background 0.3s cubic-bezier(.64,.09,.08,1);
+		//width: 100%;
+
+		&:hover,
+		&:focus {
+			background-position: 0 50px;
+
+			& ~ label{
+				color: $primary;
+			}
+		}
+
+		&:focus ~ label, &.ng-dirty:not(.empty) ~ label, &.ng-valid:not(.empty) ~ label{
+			top: 0;
+			font-size: 12px;
+		}
+
+		&.ng-valid:not(.empty){
+			background-image: linear-gradient(to left, $red 50%, $green 50%);
+			background-position: 0 50px;
+
+			& ~ label{
+				color: $green;
+			}
+		}
+
+		&.ng-invalid.ng-dirty:not(.ng-invalid-required){
+			background-image: linear-gradient(to left, $red 50%, $green 50%);
+			background-position: 100% 50px;
+
+			& ~ label{
+				color: $red;
+			}
+		}
+	}
+
+	textarea {
+		background: none !important;
+		border-bottom: 2px solid $border;
+		padding-top: 0;
+		margin-top: 20px;
+
+		& ~ label{
+			top: 0;
+			transition: top .3s cubic-bezier(.64,.09,.08,1),
+					font-size .3s cubic-bezier(.64,.09,.08,1),
+					color .3s cubic-bezier(.64,.09,.08,1),
+					border-color .3s cubic-bezier(.64,.09,.08,1);
+		}
+
+		&:hover,
+		&:focus {
+			border-color: $primary;
+		}
+
+		&:focus ~ label, &.ng-dirty:not(.empty) ~ label, &.ng-valid:not(.empty) ~ label{
+			top: -20px;
+			font-size: 12px;
+		}
+
+		&.ng-valid:not(.empty){
+			border-color: $green;
+		}
+
+		&.ng-invalid.ng-dirty:not(.ng-invalid-required){
+			border-color: $red;
+		}
+	}
+}

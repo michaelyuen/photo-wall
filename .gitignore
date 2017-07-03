@@ -1,0 +1,29 @@
+# Dist
+dist
+
+# Logs
+logs
+*.log
+
+# Coverage directory used by tools like istanbul
+coverage
+coverage_js
+
+# ignore documentation
+documentation
+
+# Dependency directory
+# Commenting this out is preferred by some people, see
+# https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git-
+node_modules
+typings
+ts-node
+
+# OS X trash files
+.DS_Store
+src/client/app/shared/config/env.config.js
+src/client/app/shared/config/env.config.js.map
+
+.idea/
+git
+package-lock.json
