@@ -1,0 +1,32 @@
+:host {
+	display: block;
+	height: 100vh;
+}
+
+.sizer,
+.brick {
+	width: 16.666%;
+}
+
+.brick {
+	border: 15px solid white;
+	background: #eee;
+	height: 50vh;
+	padding: 15px;
+
+	&.top {
+		border-top-width: 30px;
+	}
+
+	&.bottom {
+		border-bottom-width: 30px;
+	}
+
+	&.left {
+		border-left-width: 30px;
+	}
+
+	&.right {
+		border-right-width: 30px;
+	}
+}
