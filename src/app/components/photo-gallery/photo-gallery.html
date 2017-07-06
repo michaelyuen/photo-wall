@@ -1,0 +1,15 @@
+<masonry [options]="options">
+	<masonry-brick class="sizer"></masonry-brick>
+	<masonry-brick
+		*ngFor="let x of list; let i = index;"
+		class="brick"
+		[ngClass]="{
+			'top': i < 6,
+			'bottom': i >= 6,
+			'left': i % 6 == 0,
+			'right': i == 5 || i == 11
+		}"
+	>
+		{{x}}
+	</masonry-brick>
+</masonry>
